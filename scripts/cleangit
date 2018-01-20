@@ -1,0 +1,10 @@
+#!/bin/bash
+
+[ -n "$1" ] && cd "$1"
+
+test -e .gitignore
+GITIGNORE=$?
+
+[ $GITIGNORE -eq 0 ] && rm .gitignore
+git status -s | grep '^?? ' | sed s'/^?? //' | xargs rm -fr
+[ $GITIGNORE -eq 0 ] && git checkout -- .gitignore

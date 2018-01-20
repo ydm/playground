@@ -1,0 +1,13 @@
+#!/bin/bash
+
+source "$(dirname "${BASH_SOURCE[0]}")/common"
+
+cd "$ROOT"
+set -x
+(
+    ./scripts/clean
+    cmake -DCMAKE_C_COMPILER=$CC .
+    make -j$CPUS
+)
+set +x
+cd "$PREVWD"

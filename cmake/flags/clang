@@ -1,0 +1,5 @@
+-Weverything
+-Wno-gnu-statement-expression
+-Wno-missing-prototypes
+
+-g

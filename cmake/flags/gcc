@@ -1,0 +1,16 @@
+-Werror
+-Wfatal-errors
+-Wpedantic
+-pedantic-errors
+-Wall
+-Wextra
+-Wchkp
+-Wdouble-promotion
+-Wnull-dereference
+-Winit-self
+-Wmissing-include-dirs
+
+-Wconversion
+-Wpadded
+
+-g

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Project directories
+ROOT="$(readlink -f "$(dirname "${BASH_SOURCE[0]}")/..")"
+SCRIPTS="$ROOT/scripts"
+
+# Directoryes
+PREVWD="$PWD"
+
+# Compilation
+CPUS=$(lscpu | grep 'CPU(s)' | grep -o '[[:digit:]]\+' | head -n1)
+
+# Config
+CC=clang
+CXX=clang++
