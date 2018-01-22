@@ -9,9 +9,9 @@ typedef int32_t (*hashset_hash_fn) (element);
 
 struct hashset
 {
-	struct arraylist data[128];   // 128 * 24 = 3072 bytes
-	hashset_hash_fn hash;	      // 8 bytes
-	hashset_eq_fn eq;	      // 8 bytes
+	arraylist data[128];   // 128 * 24 = 3072 bytes
+	hashset_hash_fn hash;  // 8 bytes
+	hashset_eq_fn eq;      // 8 bytes
 };
 
 typedef struct hashset *hashsetp;

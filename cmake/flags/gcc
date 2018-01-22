@@ -1,4 +1,3 @@
--Werror
 -Wfatal-errors
 -Wpedantic
 -pedantic-errors
@@ -14,3 +13,4 @@
 -Wpadded
 
 -g
+-std=c11

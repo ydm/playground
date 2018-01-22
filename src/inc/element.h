@@ -5,9 +5,10 @@
 
 typedef union
 {
+  int64_t   i;
+  uint64_t  u;
   int8_t    bytes[8];
   void     *pointer;
-  uint64_t  u;
 } element;
 
 /* Element callbacks */

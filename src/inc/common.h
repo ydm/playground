@@ -1,5 +1,5 @@
-#ifndef HOLD_COMMON_H__
-#define HOLD_COMMON_H__
+#ifndef PLAY_COMMON_H__
+#define PLAY_COMMON_H__
 
 // Common includes
 #include <stdbool.h>
@@ -12,9 +12,12 @@ die (const char *err, ...)
   __attribute__ ((format (printf, 1, 2)))
   __attribute__ ((noreturn));
 
+
+#define UNUSED __attribute__((unused))
+
 // Objects lifecycle:
 //
 // alloc --> init --> deinit --> dealloc
 // new == alloc + init
 
-#endif // HOLD_COMMON_H__
+#endif // PLAY_COMMON_H__

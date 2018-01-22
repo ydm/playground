@@ -3,3 +3,4 @@
 -Wno-missing-prototypes
 
 -g
+-std=c11

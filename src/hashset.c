@@ -40,7 +40,7 @@ hashset_contains (hashsetp set, element e)
 {
   int32_t hash = set->hash (e);
   size_t index = (size_t) hash % 128u;  
-  arraylistp ary = set->data + index;
+  arraylist *ary = set->data + index;
 
   for (size_t i = 0; i < ary->length; i++)
     if (set->eq (ary->array[i], e))

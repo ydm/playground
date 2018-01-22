@@ -26,10 +26,11 @@ set (CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${_xs}")
 # | Executables |
 # +-------------+
 # 1. play -- the main thing here
-file (GLOB _sources "src/*.c")
+file (GLOB_RECURSE _sources "src/*.c")
 add_executable (play "${_sources};exec/play.c")
-# target_link_libraries (play m)
+target_link_libraries (play m GL GLEW GLU glfw)
 
 # 2. check -- (unit) tests
 file (GLOB _tests "test/*.c")
 add_executable (check "${_sources};${_tests};exec/check.c")
+target_link_libraries (check m GL GLEW GLU glfw)

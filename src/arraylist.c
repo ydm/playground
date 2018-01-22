@@ -5,7 +5,7 @@
 
 
 void
-arraylist_init (arraylistp a, size_t cap)
+arraylist_init (arraylist *a, size_t cap)
 {
 	a->array = calloc (sizeof (element), cap);
 	a->capacity = cap;
@@ -13,14 +13,14 @@ arraylist_init (arraylistp a, size_t cap)
 }
 
 void
-arraylist_deinit (arraylistp a)
+arraylist_deinit (arraylist *a)
 {
 	free (a->array);
 	a->array = NULL;
 }
 
 void
-arraylist_add (arraylistp a, element e)
+arraylist_add (arraylist *a, element e)
 {
 	// TODO: Instead of asserting, enlarge capacity if needed!
 	assert (a->length < a->capacity);
